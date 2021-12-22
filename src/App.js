@@ -1,6 +1,8 @@
-import { React, useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
-import { api } from "./utils/api.js";
+import "./utils/api";
+
+//import icons from images folder
 import add from "./components/images/add.png";
 import heart from "./components/images/heart.png";
 import paperplane from "./components/images/paperplane.png";
@@ -11,16 +13,9 @@ import shoppingBag from "./components/images/shoppingBag.png";
 import filledCircle from "./components/images/filledCircle.png";
 import holdingImage from "./components/images/holdingImage.png";
 
+//fetch request for the API to work
 const App = () => {
-  const [newData, setNewData] = useState();
-
-  // const getter = async () => {
-  //   try {
-  //     setNewData([])
-  //     let newData = await api()
-  //     act(() => {
-  //       setNewData(newData[0])
-  //     }
+  const [pics, setPics] = useState("");
 
   return (
     <div className="container">
@@ -30,10 +25,9 @@ const App = () => {
         <img scr={heart} alt="heart icon"></img>
         <img classname="headImg" src={paperplane} alt="send arrow icon"></img>
       </header>
-
-      <section>1??</section>
+      <section>?1?</section>
       <section>
-        <img className="mainImage" scr={holdingImage}></img>
+        <img scr={holdingImage}></img>
       </section>
       <footer className="footer">
         <img id="footImg" scr={home} alt="homepage house icon" />
